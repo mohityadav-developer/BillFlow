@@ -26,6 +26,9 @@ app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+    res.send("BillFlow Backend is running");
+});
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() =>
